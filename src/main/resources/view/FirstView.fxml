@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?scenebuilder-preview-i18n-resource ../../../../lang_en.properties?>
+<?scenebuilder-stylesheet ../../../../main.css?>
+
+<StackPane fx:id="root" maxHeight="-1.0" maxWidth="-1.0"
+	prefHeight="394.0" prefWidth="594.0" xmlns:fx="http://javafx.com/fxml/1"
+	xmlns="http://javafx.com/javafx/2.2" fx:controller="com.olczak.gui.FirstView">
+	<children>
+		<VBox prefHeight="400.0" prefWidth="800.0">
+			<children>
+				<HBox prefHeight="100.0" prefWidth="257.0">
+					<children>
+
+						<RadioButton fx:id="enRadio" mnemonicParsing="false"
+							selected="true" prefHeight="18.0" prefWidth="92.0"
+							text="%first.radio.english">
+							<toggleGroup>
+								<ToggleGroup fx:id="langGroup" />
+							</toggleGroup>
+						</RadioButton>
+						<RadioButton fx:id="plRadio" mnemonicParsing="false"
+							text="%first.radio.polish" toggleGroup="$langGroup" />
+					</children>
+				</HBox>
+				
+				<TableView fx:id="mainTable3" prefHeight="420.0" prefWidth="600.0">
+					<columns>
+						<TableColumn fx:id="categoryColumn" prefWidth="100.0"
+							text="C1" />
+						<TableColumn fx:id="nameColumn" minWidth="0.0"
+							prefWidth="100.0" text="C2" />
+						<TableColumn fx:id="detailsColumn" minWidth="0.0"
+							prefWidth="100.0" text="C3" />
+						<TableColumn fx:id="costColumn" minWidth="0.0"
+							prefWidth="100.0" text="C4" />
+					</columns>
+				</TableView>
+				<HBox prefHeight="100.0" prefWidth="200.0">
+					<children>
+						<Button onAction="#addClick" mnemonicParsing="false" prefHeight="25.0"
+							prefWidth="100.0" minWidth="100" text="%first.button.add">
+							<HBox.margin>
+								<Insets right="20.0" />
+							</HBox.margin>
+						</Button>
+						<Button mnemonicParsing="false" prefHeight="25.0"
+							prefWidth="100.0" minWidth="100" text="%first.button.edit">
+							<HBox.margin>
+								<Insets right="20.0" />
+							</HBox.margin>
+						</Button>
+						<Button onAction="#deleteClick" mnemonicParsing="false" prefHeight="25.0"
+							prefWidth="100.0" minWidth="100" text="%first.button.delete" />
+						<Button mnemonicParsing="false" minWidth="100"
+							text="%first.button.details">
+							<HBox.margin>
+								<Insets left="100.0" />
+							</HBox.margin>
+						</Button>
+					</children>
+				</HBox>
+			</children>
+		</VBox>
+	</children>
+
+</StackPane>
